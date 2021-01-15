@@ -65,7 +65,7 @@ public class Graph {
      */
     public void add_unidirectional_edge(char startNodeId, char toNodeId, int distance) {
         // check for nodes existence
-        HashMap<String, Node> nodes = this.createNode(Character.toUpperCase(startNodeId), Character.toUpperCase(toNodeId));
+        HashMap<String, Node> nodes = this.createNode(Character.toLowerCase(startNodeId), Character.toLowerCase(toNodeId));
         
         // set neighbor for start node
         if (nodes.containsKey("startNode") && nodes.containsKey("toNode")) {
@@ -93,7 +93,7 @@ public class Graph {
      */
     public void add_bidirectional_edge(char startNodeId, char toNodeId, int distance) {
         // check for nodes existence
-        HashMap<String, Node> nodes = this.createNode(Character.toUpperCase(startNodeId), Character.toUpperCase(toNodeId));
+        HashMap<String, Node> nodes = this.createNode(Character.toLowerCase(startNodeId), Character.toLowerCase(toNodeId));
         
         // set neighbor for start node
         if (nodes.containsKey("startNode") && nodes.containsKey("toNode")) {
@@ -218,9 +218,9 @@ public class Graph {
 
     public void shortestPath(char startNodeId, char toNodeId) {
 
-        // convert ids to uppercase
-        startNodeId = Character.toUpperCase(startNodeId);
-        toNodeId = Character.toUpperCase(toNodeId);
+        // convert ids to lowercase
+        startNodeId = Character.toLowerCase(startNodeId);
+        toNodeId = Character.toLowerCase(toNodeId);
 
         // return error if both nodes id are the same
         if (startNodeId == toNodeId) {
