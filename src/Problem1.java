@@ -11,6 +11,7 @@ public class Problem1 {
         g.add_unidirectional_edge('s','a',1);
         g.add_unidirectional_edge('s','c',2);
 
-        g.shortestPath('s', 'e');
+        g.shortestPath('s', 'd');
+        // g.displayNodes();
     }
 }
